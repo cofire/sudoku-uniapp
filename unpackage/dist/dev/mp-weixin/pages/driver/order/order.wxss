@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+page,
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.detail {
+  width: 92.5%;
+  height: 100%;
+  margin: 0 auto;
+}
+.detail .uni-padding-wrap {
+    margin: 20rpx 0 20rpx 0;
+    border-radius: 8rpx;
+}
+.detail .uni-padding-wrap .banner {
+      width: 100%;
+}
+.petrol-intr {
+  height: 130rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  padding-top: 15rpx;
+  padding-left: 30rpx;
+  background: #FFFFFF;
+  box-shadow: 2rpx 2rpx 8rpx 2rpx rgba(61, 84, 152, 0.15);
+  border-radius: 4rpx;
+  font-family: PingFangTC-Regular;
+  font-size: 24rpx;
+  color: #333333;
+  letter-spacing: 1.6rpx;
+}
+.petrol-intr text {
+    display: inline-block;
+    height: 50rpx;
+    width: 100%;
+    line-height: 50rpx;
+}
+.order {
+  padding: 0 30rpx 30rpx 30rpx;
+  box-shadow: 0 0 4rpx 2rpx rgba(0, 0, 0, 0.05);
+  border-radius: 4rpx;
+}
+.order text {
+    display: inline-block;
+    width: 100%;
+}
+.order .remain-money {
+    font-family: PingFangTC-Regular;
+    font-size: 22rpx;
+    color: #3D5498;
+    letter-spacing: 1.47px;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.order .uni-form-item {
+    margin: 0 auto;
+    margin-bottom: 40rpx;
+    margin-top: 40rpx;
+    font-size: 28rpx;
+    color: #333333;
+    border-bottom: 1rpx solid #E6E6E6;
+    color: #333333;
+}
+.order .uni-form-item .title {
+      display: inline-block;
+      width: 20%;
+      height: 112rpx;
+      line-height: 112rpx;
+      overflow: hidden;
+      text-align: center;
+      font-family: PingFangTC-Regular;
+      font-size: 80rpx;
+      color: #333333;
+}
+.order .uni-form-item .uni-input {
+      display: inline-block;
+      width: 80%;
+      height: 112rpx;
+      line-height: 112rpx;
+}
+.order button {
+    margin-top: 90rpx;
+    font-family: PingFangTC-Regular;
+    font-size: 28rpx;
+    color: #FFFFFF;
+    background: #3D5498;
+    border-radius: 8rpx;
+}
+

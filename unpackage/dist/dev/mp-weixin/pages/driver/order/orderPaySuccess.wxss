@@ -1,0 +1,62 @@
+@charset "UTF-8";
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+page,
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.detail {
+  width: 90%;
+  height: 85%;
+  text-align: center;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+}
+.detail .icon {
+    width: 150rpx;
+    height: 150rpx;
+    margin: 0 auto;
+    margin-bottom: 20rpx;
+}
+.detail .icon image {
+      width: 100%;
+      height: 100%;
+}
+.detail,
+  .detail .success-desc {
+    margin: 40rpx 0 40rpx 0;
+    font-family: PingFangHK-Regular;
+    font-size: 36rpx;
+    color: #333333;
+    letter-spacing: 2.4rpx;
+}
+.detail,
+  .detail .desc {
+    font-family: PingFangHK-Regular;
+    font-size: 32rpx;
+    color: #999999;
+    letter-spacing: 2.13rpx;
+    text-align: center;
+}
+.detail .back {
+    margin-top: 20rpx;
+    margin-top: 60rpx;
+    text-align: center;
+}
+.detail .back button {
+      width: 80%;
+      font-family: PingFangTC-Regular;
+      font-size: 28rpx;
+      color: #FFFFFF;
+      background: #3D5498;
+      border-radius: 8rpx;
+}
+

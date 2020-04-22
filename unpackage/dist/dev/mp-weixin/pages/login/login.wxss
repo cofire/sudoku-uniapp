@@ -1,0 +1,117 @@
+@charset "UTF-8";
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+page,
+.content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.input-placeholder {
+  font-family: PingFangTC-Regular;
+  font-size: 30rpx;
+  color: #CCCCCC;
+  text-align: left;
+}
+.content > image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.login {
+  position: relative;
+  width: 91.5%;
+  height: 70%;
+  border-radius: 8px;
+  margin: 0 auto;
+  margin-top: 28.2%;
+  background-color: #FFFFFF;
+}
+.avator {
+  position: absolute;
+  width: 210rpx;
+  height: 210rpx;
+  float: left;
+  left: 50%;
+  margin-left: -105rpx;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.avator image {
+    width: 100%;
+    height: 100%;
+}
+.navbar {
+  padding-top: 30rpx;
+  margin-bottom: 15%;
+}
+._ul {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+._ul ._li {
+    display: inline-block;
+    width: 33%;
+    line-height: 60rpx;
+    font-family: PingFangTC-Regular;
+    font-size: 32rpx;
+    color: #333333;
+    text-align: center;
+}
+._ul .active {
+    color: #3D5498;
+    border-bottom: 1px solid #3D5498;
+}
+.uni-form-item {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 85rpx;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #CCCCCC;
+}
+.uni-form-item .title {
+    display: inline-block;
+    width: 30%;
+    height: 60rpx;
+    line-height: 60rpx;
+    overflow: hidden;
+}
+.uni-form-item .uni-input {
+    display: inline-block;
+    width: 70%;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.uni-form-item .button-code {
+    width: 165rpx;
+    float: right;
+    height: 54rpx;
+    line-height: 54rpx;
+    background: #3D5498;
+    border-radius: 4rpx;
+    font-family: PingFangTC-Regular;
+    font-size: 26rpx;
+    color: #FFFFFF;
+    text-align: center;
+}
+.uni-btn-v {
+  margin-top: 40%;
+  width: 80%;
+  margin: 0 auto;
+  margin-left: 10%;
+}
+.uni-btn-v button {
+    background-color: #3D5498;
+    font-size: 32rpx;
+    color: #FFFFFF;
+    text-align: center;
+}
+

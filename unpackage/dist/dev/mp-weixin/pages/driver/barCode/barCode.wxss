@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+page,
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(61, 84, 152, 0.6);
+}
+.nav {
+  width: 92%;
+  height: 80%;
+  border-radius: 8rpx;
+  background: #FFFFFF;
+  position: absolute;
+  left: 4%;
+  top: 15%;
+}
+.user-info,
+._hr,
+.down {
+  width: 86%;
+  margin: 0 auto;
+}
+.user-info {
+  height: 20%;
+  margin-bottom: 20rpx;
+}
+.user-info .avator {
+    position: absolute;
+    width: 180rpx;
+    height: 180rpx;
+    float: left;
+    border-radius: 90rpx;
+    left: 50%;
+    margin-left: -90rpx;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: #FFFFFF;
+}
+.user-info .avator image {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80%;
+}
+.user-info .placeholder {
+    height: 90rpx;
+}
+.user-info .nick-name {
+    font-family: PingFangHK-Regular;
+    font-size: 26rpx;
+    line-height: 40rpx;
+    color: #3D5498;
+    letter-spacing: 1.73rpx;
+    text-align: center;
+}
+.user-info .summary {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    font-family: PingFangHK-Regular;
+    font-size: 24rpx;
+    color: #CCCCCC;
+    letter-spacing: 1.6rpx;
+    text-align: center;
+}
+._hr {
+  height: 1rpx;
+  margin-bottom: 20rpx;
+  border: 1rpx dashed #E6E6E6;
+}
+.bar-code {
+  height: 75%;
+  margin-top: 40rpx;
+  text-align: center;
+}
+.bar-code .title {
+    font-family: PingFangHK-Regular;
+    font-size: 30rpx;
+    color: #333333;
+    letter-spacing: 2rpx;
+}
+.bar-code image {
+    width: 380rpx;
+    height: 380rpx;
+    margin: 40rpx 0 40rpx 0;
+}
+.bar-code .money {
+    font-family: PingFangHK-Medium;
+    font-size: 36rpx;
+    color: #333333;
+    letter-spacing: 2.4rpx;
+}
+

@@ -1,0 +1,48 @@
+{
+  "pages": [ //pages数组中第一项表示应用启动页
+    {
+      "path": "pages/user/user",
+      "style": {
+        "navigationBarTitleText": "用户"
+      }
+    }, {
+      "path": "pages/sudoku/sudoku",
+      "style": {
+        "navigationBarTitleText": "数独"
+      }
+    }, {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "首页"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "车享",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#3D5498",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath": "static/icon/home.png",
+      "selectedIconPath": "static/icon/home_selected.png",
+      "text": "首页"
+    }, {
+      "pagePath": "pages/sudoku/sudoku",
+      "iconPath": "static/icon/game.png",
+      "selectedIconPath": "static/icon/game_selected.png",
+      "text": "数独"
+    }, {
+      "pagePath": "pages/user/user",
+      "iconPath": "static/icon/user.png",
+      "selectedIconPath": "static/icon/user_selected.png",
+      "text": "用户"
+    }]
+  }
+}

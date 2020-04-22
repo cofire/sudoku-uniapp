@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+page,
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.detail {
+  width: 92.5%;
+  height: 100%;
+  margin: 0 auto;
+}
+.detail .uni-padding-wrap {
+    background-image: -webkit-linear-gradient(top, #594FAD 0%, #2D2775 100%);
+    background-image: linear-gradient(180deg, #594FAD 0%, #2D2775 100%);
+    box-shadow: 0 0 4rpx 2rpx rgba(0, 0, 0, 0.05);
+    border-radius: 8rpx;
+    height: 250rpx;
+    margin-bottom: 90rpx;
+}
+.detail .uni-padding-wrap .banner {
+      width: 100%;
+      height: 100%;
+}
+.img-list {
+  width: 100%;
+  height: 350rpx;
+}
+.img-list image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8rpx;
+}
+.img-list .left {
+    float: left;
+    width: 250rpx;
+    height: 100%;
+}
+.img-list .right {
+    float: right;
+    width: 416rpx;
+    height: 100%;
+}
+
