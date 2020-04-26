@@ -1,21 +1,23 @@
 <template>
   <view class="content">
     <view class="header">
+      <view class="item" @click="reStart()">
+        <text>重新开始</text>
+      </view>
       <view class="item">
         <picker @change="levelChange" :value="levelIndex" :range="levelList" range-key="lable">
           <view class="uni-input">{{levelList[levelIndex].lable}} <span class="icon">▼</span></view>
         </picker>
       </view>
       <view class="item">
-        <text>计时器：</text>
         <text>1:19:12</text>
       </view>
     </view>
     <view class="detail">
       <view class="grid">
-        <div v-for="x in nums" :key="x.id" class="row">
-          <div v-for="y in nums" :key="y.id" :class="true?'col row-'+x + ' col-'+y:''">
-            {{ y }}
+        <div v-for="(xs, x) in sudoku" :key="xs.id" class="row">
+          <div v-for="(ys,y) in xs" :key="ys.id" :class="dealClass(x,y,ys)" @click="tapGrid(x,y,ys)">
+            {{ ys.value==0?"":ys.value }}
           </div>
         </div>
       </view>
@@ -29,7 +31,7 @@
           </view>
           <p>撤销</p>
         </view>
-        <view class="operation">
+        <view class="operation" @click="erase()">
           <view class="icon">
             <image src="../../static/icon/erase.png" mode=""></image>
           </view>
@@ -63,16 +65,86 @@
           value: 'easy',
           lable: '入门级'
         }],
+        sudoku: [],
         levelIndex: 0,
         nums: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-        numChoose: 5
+        preSelected:{x:0,y:0,grid:{}},
+        gridSelected: {}
       }
     },
     methods: {
+      async loadData() {
+        this.levelList = await this.$json('levelList');
+        this.sudoku = await this.$json("sudoku");
+      },
+      dealClass(x, y, grid) {
+        let gridClass = 'col row-' + (x + 1) + ' col-' + (y + 1) + " " + grid.type;
+        if(grid.numClass != undefined || grid.numClass != null){
+          gridClass += " "+grid.numClass;
+        }
+        return gridClass;
+      },
+      erase() {
+        if(this.gridSelected.type == "new"){
+          this.gridSelected.value = 0;
+        }
+      },
+      /**选中格子**/
+      tapGrid(x,y,grid) {
+        console.log(this.gridSelected == grid)
+        this.gridSelected = grid;
+        console.log(this.gridSelected);
+        this.initClass();
+        this.addClass(x,y,grid);
+        console.log(this.sudoku);
+      },
+      initClass(){
+        for(var i=0;i<=8;i++){
+          for(var j=0;j<=8;j++){
+            this.sudoku[i][j].numClass = "";
+          }
+        }
+      },
+      addClass(x,y,grid){
+        for(var i=0;i<=8;i++){
+          this.sudoku[x][i].numClass = "peers";
+          this.sudoku[i][y].numClass = "peers";
+        }
+        for(var i=parseInt(x/3)*3;i<parseInt(x/3)*3+3;i++){
+          for(var j=parseInt(y/3)*3;j<parseInt(y/3)*3+3;j++){
+            this.sudoku[i][j].numClass = "peers";
+          }
+        }
+        for(var i=0;i<=8;i++){
+          for(var j=0;j<=8;j++){
+            if(grid.value == this.sudoku[i][j].value)
+            this.sudoku[i][j].numClass += " same";
+          }
+        }
+        grid.numClass = "selected"; 
+      },
+      
       /**填写数字**/
       fillNum(num) {
         console.log(num);
+        this.gridSelected.value = num;
+      },
+      reStart(){
+        for(var i=0;i<=8;i++){
+          for(var j=0;j<=8;j++){
+            if(this.sudoku[i][j].type == "new"){
+              this.sudoku[i][j].value= 0;
+            }
+          }
+        }
+        this.gridSelected = {};
+        this.initClass();
       }
+      
+      
+    },
+    onShow() {
+      this.loadData();
     }
   }
 </script>
@@ -89,11 +161,10 @@
 
     .item {
       float: left;
-      width: 50%;
-      text-align: left;
+      width: 33%;
+      text-align: center;
       height: 100%;
       line-height: 100rpx;
-      padding-left: 50rpx;
       font-size: 32rpx;
 
       picker {}
@@ -134,7 +205,22 @@
       }
     }
 
-
+    .new {
+      color: #4CD964;
+    }
+    
+    .peers{
+      background-color: #a1ffbf;
+    }
+    
+    .selected{
+      color: #FFFFFF;
+      background-color: #4CD964;
+    }
+    
+    .same{
+      color: #F0AD4E;
+    }
   }
 
   .operation-bar {
